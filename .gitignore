@@ -1,0 +1,9 @@
+# 本地预览与临时文件
+preview.html
+_setup.log
+*.log
+
+# 编辑器 / 系统
+.vscode/
+.DS_Store
+Thumbs.db
