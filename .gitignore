@@ -7,3 +7,6 @@ _setup.log
 .vscode/
 .DS_Store
 Thumbs.db
+
+# 自动更新 workflow 临时克隆的笔记仓库
+.math-of-li/
