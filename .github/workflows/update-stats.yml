@@ -1,4 +1,4 @@
-name: Update profile stats
+name: Refresh profile charts
 
 # 每天刷新个人主页上的两类图表（北京时间 11:00 左右）：
 #   1. 从 math-of-li 统计出的知识分布 / 贡献概览 SVG
@@ -52,8 +52,8 @@ jobs:
             --out assets
 
       # 贡献贪吃蛇：小蛇在贡献网格上游走、把有贡献的格子吃掉。
-      # 用默认的 github.token 读公开贡献数据；生成的是 SMIL 动画 SVG，
-      # 在 <img> 里会自动循环播放。
+      # 用默认的 github.token 读公开贡献数据；产出是 CSS keyframes 动画 SVG，
+      # 在 <img> 里会自行循环播放，不需要任何脚本。
       - name: Generate contribution snake
         uses: Platane/snk@v3
         with:
@@ -68,7 +68,7 @@ jobs:
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add assets
-            git commit -m "chore: refresh stats charts from math-of-li"
+            git commit -m "chore: refresh profile charts (stats + snake)"
             git push
             echo "::notice::统计图表已更新"
           else
