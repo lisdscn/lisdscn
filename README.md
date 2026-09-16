@@ -132,6 +132,17 @@
 
 <img src="assets/knowledge.svg" alt="知识分布：六门课程按行数占比" width="100%">
 
+### 🐍 贡献贪吃蛇
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/snake.svg" />
+  <img alt="贡献贪吃蛇：小蛇逐格吃掉我过去一年的每一格贡献" src="assets/snake.svg" width="100%" />
+</picture>
+
+> 小蛇的路径由 GitHub 贡献图实时生成 —— 每吃掉一格，就代表我那一天真正写下过东西。
+> 图每天自动重绘一次，跟上面的统计数据一起刷新。
+
 ### 数字一览
 
 | 指标 | 数值 |
@@ -171,5 +182,5 @@
 
 <div align="center">
   <sub>📖 笔记持续更新中 —— 如果这些推导对你有帮助，欢迎 Star ⭐</sub><br/>
-  <sub><a href="https://github.com/lisdscn/math-of-li">math-of-li</a> · 最后更新 2026-09-15</sub>
+  <sub><a href="https://github.com/lisdscn/math-of-li">math-of-li</a> · 本页图表每天 11:00（北京时间）自动重绘</sub>
 </div>

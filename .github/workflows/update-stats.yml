@@ -1,7 +1,9 @@
 name: Update profile stats
 
-# 笔记仓库 math-of-li 有新提交时，自动重新生成 README 里的统计图表。
-# 每天 03:00 UTC（北京时间 11:00）兜底检查一次。
+# 每天刷新个人主页上的两类图表（北京时间 11:00 左右）：
+#   1. 从 math-of-li 统计出的知识分布 / 贡献概览 SVG
+#   2. 把 GitHub 贡献图渲染成的贪吃蛇动画 SVG
+# 笔记仓库有新提交时也会立即跑一次。
 
 on:
   schedule:
@@ -48,6 +50,17 @@ jobs:
             --repo .math-of-li \
             --ref HEAD \
             --out assets
+
+      # 贡献贪吃蛇：小蛇在贡献网格上游走、把有贡献的格子吃掉。
+      # 用默认的 github.token 读公开贡献数据；生成的是 SMIL 动画 SVG，
+      # 在 <img> 里会自动循环播放。
+      - name: Generate contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake.svg?palette=github-light
+            assets/snake-dark.svg?palette=github-dark
 
       - name: Commit if changed
         run: |
