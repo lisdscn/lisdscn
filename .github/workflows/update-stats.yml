@@ -1,13 +1,17 @@
 name: Refresh profile charts
 
-# 每天刷新个人主页上的两类图表（北京时间 11:00 左右）：
+# 每天刷新个人主页上的两类图表（北京时间 10:23 / 22:23 各跑一次）：
 #   1. 从 math-of-li 统计出的知识分布 / 贡献概览 SVG
 #   2. 把 GitHub 贡献图渲染成的贪吃蛇动画 SVG
 # 笔记仓库有新提交时也会立即跑一次。
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    # 北京时间 10:23 与 22:23（UTC+8）。刻意避开整点 —— GitHub 文档指出
+    # 整点前后是高负载期，schedule 可能被延迟甚至直接丢弃（实测曾延迟 5 小时）。
+    # 两个时间点互为兜底；workflow 幂等（无变化不提交），重复跑无副作用。
+    - cron: '23 2 * * *'
+    - cron: '23 14 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -26,8 +30,12 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      # fetch-depth: 0 —— 保活步骤要用 `git log --author` 远溯历史，
+      # 默认的浅克隆（depth=1）只能看到最近一次提交。
       - name: Checkout profile repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # fetch-depth: 0 是必须的 —— 脚本用 `git log --numstat` 统计
       # 各课程的累计新增行数，浅克隆（默认 depth=1）会漏掉全部历史。
@@ -62,15 +70,39 @@ jobs:
             assets/snake.svg?palette=github-light
             assets/snake-dark.svg?palette=github-dark
 
+      - name: Configure git
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Commit if changed
         run: |
+          changed=0
+
           if [ -n "$(git status --porcelain -- assets)" ]; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add assets
             git commit -m "chore: refresh profile charts (stats + snake)"
+            changed=1
+          fi
+
+          # 防「60 天无仓库活动 → scheduled workflow 被自动禁用」：
+          # 若仓库主人已超过 50 天没提交，就补一次心跳提交维持活跃。
+          OWNER="${{ github.repository_owner }}"
+          LAST=$(git log -1 --format=%ct --author="$OWNER" 2>/dev/null | head -1)
+          LAST=${LAST:-0}
+          DAYS=$(( ( $(date +%s) - LAST ) / 86400 ))
+          echo "仓库主人 ${OWNER} 最近提交在 ${DAYS} 天前"
+
+          if [ "$DAYS" -ge 50 ]; then
+            date -u +"%Y-%m-%dT%H:%M:%SZ" > .keepalive
+            git add .keepalive
+            git commit -m "chore: keepalive (owner inactive for ${DAYS} days)"
+            changed=1
+          fi
+
+          if [ "$changed" = "1" ]; then
             git push
-            echo "::notice::统计图表已更新"
+            echo "::notice::图表/心跳已更新"
           else
-            echo "统计数据无变化，跳过提交"
+            echo "数据无变化，跳过提交"
           fi
