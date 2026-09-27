@@ -199,7 +199,7 @@
 </picture>
 
 > 小蛇的路径由 GitHub 贡献图实时生成 —— 每吃掉一格，就代表我那一天真正写下过东西。
-> 以上三张图每天自动重绘，与统计数字一起刷新。
+> 以上三张图**每天早上 5 点**自动重绘，与统计数字一起刷新。
 
 ---
 
@@ -232,5 +232,5 @@
   <sub>📖 笔记持续更新中 —— 如果这些推导对你有帮助，欢迎 Star ⭐</sub><br/>
   <sub><a href="https://github.com/lisdscn/math-of-li">math-of-li</a> ·
   <a href="https://github.com/lisdscn/exercises">exercises</a> ·
-  本页图表每天自动重绘</sub>
+  本页图表每天早上 5 点自动重绘</sub>
 </div>
