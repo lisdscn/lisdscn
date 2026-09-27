@@ -1,60 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="428" viewBox="0 0 880 428" role="img" aria-label="知识分布 Knowledge Map">
-<title>知识分布 Knowledge Map</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="516" viewBox="0 0 880 516" role="img" aria-label="课程分布：笔记与习题">
+<title>课程分布：笔记与习题</title>
 <style>
   .bg { fill:#ffffff; stroke:#d0d7de; }
   .t  { fill:#1f2328; }
   .st { fill:#59636e; }
   .tr { fill:#1f2328; opacity:.06; }
-  .mono { font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace; }
+  .dv { stroke:#d0d7de; }
   text { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; }
   @media (prefers-color-scheme: dark) {
     .bg { fill:#0d1117; stroke:#30363d; }
     .t  { fill:#e6edf3; }
     .st { fill:#9198a1; }
     .tr { fill:#e6edf3; opacity:.12; }
+    .dv { stroke:#30363d; }
   }
 </style>
 
-<rect class="bg" x="0.5" y="0.5" width="879" height="427" rx="12"/>
-<text class="t" x="26" y="40" font-size="17" font-weight="600">📚 知识分布</text>
-<text class="st" x="854" y="40" font-size="12" text-anchor="end">6 门课 · 94 篇 · 14,441 行</text>
-<line x1="26" y1="56" x2="854" y2="56" stroke="#d0d7de" stroke-width="1" opacity=".6"/>
-<text class="t" x="26" y="96" font-size="13.5" font-weight="600">矩阵分析</text>
-<text class="st" x="26" y="111" font-size="10">Matrix Analysis</text>
-<rect class="tr" x="160" y="88" width="458" height="16" rx="8"/>
-<rect x="160" y="88" width="458" height="16" rx="8" fill="#1f6feb" opacity="0.9"/>
-<text x="608" y="99.5" font-size="10" font-weight="700" text-anchor="end" fill="#ffffff">5,964 行</text>
-<text class="t" x="854" y="100" font-size="12" font-weight="700" text-anchor="end">42<tspan class="st" font-size="10.5" font-weight="400"> 篇</tspan></text>
-<text class="t" x="26" y="144" font-size="13.5" font-weight="600">泛函分析</text>
-<text class="st" x="26" y="159" font-size="10">Functional Analysis</text>
-<rect class="tr" x="160" y="136" width="458" height="16" rx="8"/>
-<rect x="160" y="136" width="283" height="16" rx="8" fill="#8957e5" opacity="0.9"/>
-<text x="433" y="147.5" font-size="10" font-weight="700" text-anchor="end" fill="#ffffff">3,688 行</text>
-<text class="t" x="854" y="148" font-size="12" font-weight="700" text-anchor="end">25<tspan class="st" font-size="10.5" font-weight="400"> 篇</tspan></text>
-<text class="t" x="26" y="192" font-size="13.5" font-weight="600">微分几何</text>
-<text class="st" x="26" y="207" font-size="10">Differential Geometry</text>
-<rect class="tr" x="160" y="184" width="458" height="16" rx="8"/>
-<rect x="160" y="184" width="169" height="16" rx="8" fill="#2ea043" opacity="0.9"/>
-<text x="319" y="195.5" font-size="10" font-weight="700" text-anchor="end" fill="#ffffff">2,201 行</text>
-<text class="t" x="854" y="196" font-size="12" font-weight="700" text-anchor="end">13<tspan class="st" font-size="10.5" font-weight="400"> 篇</tspan></text>
-<text class="t" x="26" y="240" font-size="13.5" font-weight="600">常微分方程</text>
-<text class="st" x="26" y="255" font-size="10">ODE</text>
-<rect class="tr" x="160" y="232" width="458" height="16" rx="8"/>
-<rect x="160" y="232" width="109" height="16" rx="8" fill="#d29922" opacity="0.9"/>
-<text x="259" y="243.5" font-size="10" font-weight="700" text-anchor="end" fill="#ffffff">1,422 行</text>
-<text class="t" x="854" y="244" font-size="12" font-weight="700" text-anchor="end">6<tspan class="st" font-size="10.5" font-weight="400"> 篇</tspan></text>
-<text class="t" x="26" y="288" font-size="13.5" font-weight="600">偏微分方程</text>
-<text class="st" x="26" y="303" font-size="10">PDE</text>
-<rect class="tr" x="160" y="280" width="458" height="16" rx="8"/>
-<rect x="160" y="280" width="82" height="16" rx="8" fill="#e3642a" opacity="0.9"/>
-<text x="232" y="291.5" font-size="10" font-weight="700" text-anchor="end" fill="#ffffff">1,068 行</text>
-<text class="t" x="854" y="292" font-size="12" font-weight="700" text-anchor="end">6<tspan class="st" font-size="10.5" font-weight="400"> 篇</tspan></text>
-<text class="t" x="26" y="336" font-size="13.5" font-weight="600">复变函数</text>
-<text class="st" x="26" y="351" font-size="10">Complex Analysis</text>
-<rect class="tr" x="160" y="328" width="458" height="16" rx="8"/>
-<rect x="160" y="328" width="8" height="16" rx="8" fill="#db61a2" opacity="0.9"/>
-<text class="t" x="854" y="340" font-size="12" font-weight="700" text-anchor="end">2<tspan class="st" font-size="10.5" font-weight="400"> 篇</tspan></text>
-<text class="st" x="854" y="353" font-size="9.5" text-anchor="end" >98 行</text>
-<line x1="26" y1="374" x2="854" y2="374" stroke="#d0d7de" stroke-width="1" opacity=".6"/>
-<text class="st" x="26" y="401" font-size="11.5">94 篇笔记共 <tspan class="t" font-weight="700">14,441</tspan> 行 · <tspan class="t" font-weight="700">19</tspan> 次提交 · 累计新增 <tspan class="t" font-weight="700">14,491</tspan> 行</text>
+<rect class="bg" x="0.5" y="0.5" width="879" height="515" rx="12"/>
+<text class="t" x="26" y="34" font-size="17" font-weight="600">📚 课程分布</text>
+<text class="st" x="854" y="34" font-size="11.5" text-anchor="end">笔记 94 篇 · 习题 4 篇</text>
+<text class="st" x="26" y="68" font-size="10.5">课程</text>
+<text class="st" x="566" y="68" font-size="10.5" text-anchor="end">笔记</text>
+<text class="st" x="680" y="68" font-size="10.5" text-anchor="end">习题</text>
+<text class="st" x="854" y="68" font-size="10.5" text-anchor="end">行数合计</text>
+<line class="dv" x1="26" y1="76" x2="854" y2="76" stroke-width="1" opacity=".7"/>
+<text class="t" x="26" y="114" font-size="13.5" font-weight="600">矩阵分析</text>
+<text class="st" x="26" y="129" font-size="9.5">Matrix Analysis</text>
+<rect class="tr" x="152" y="106" width="300" height="16" rx="8"/>
+<rect x="152" y="106" width="300" height="16" rx="8" fill="#1f6feb" opacity="0.9"/>
+<text class="t" x="566" y="116" font-size="11.5" font-weight="600" text-anchor="end">42<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="566" y="130" font-size="9.5" text-anchor="end">5,964</text>
+<text class="st" x="680" y="116" font-size="11.5" text-anchor="end">—</text>
+<text class="t" x="854" y="116" font-size="12" font-weight="600" text-anchor="end">5,964</text>
+<text class="t" x="26" y="164" font-size="13.5" font-weight="600">泛函分析</text>
+<text class="st" x="26" y="179" font-size="9.5">Functional Analysis</text>
+<rect class="tr" x="152" y="156" width="300" height="16" rx="8"/>
+<rect x="152" y="156" width="186" height="16" rx="8" fill="#8957e5" opacity="0.9"/>
+<rect x="338" y="156" width="11" height="16" rx="8" fill="#8957e5" opacity="0.32"/>
+<text class="t" x="566" y="166" font-size="11.5" font-weight="600" text-anchor="end">25<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="566" y="180" font-size="9.5" text-anchor="end">3,688</text>
+<text class="t" x="680" y="166" font-size="11.5" font-weight="600" text-anchor="end">1<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="680" y="180" font-size="9.5" text-anchor="end">215</text>
+<text class="t" x="854" y="166" font-size="12" font-weight="600" text-anchor="end">3,903</text>
+<text class="t" x="26" y="214" font-size="13.5" font-weight="600">微分几何</text>
+<text class="st" x="26" y="229" font-size="9.5">Differential Geometry</text>
+<rect class="tr" x="152" y="206" width="300" height="16" rx="8"/>
+<rect x="152" y="206" width="111" height="16" rx="8" fill="#2ea043" opacity="0.9"/>
+<rect x="263" y="206" width="49" height="16" rx="8" fill="#2ea043" opacity="0.32"/>
+<text class="t" x="566" y="216" font-size="11.5" font-weight="600" text-anchor="end">13<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="566" y="230" font-size="9.5" text-anchor="end">2,201</text>
+<text class="t" x="680" y="216" font-size="11.5" font-weight="600" text-anchor="end">2<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="680" y="230" font-size="9.5" text-anchor="end">967</text>
+<text class="t" x="854" y="216" font-size="12" font-weight="600" text-anchor="end">3,168</text>
+<text class="t" x="26" y="264" font-size="13.5" font-weight="600">常微分方程</text>
+<text class="st" x="26" y="279" font-size="9.5">ODE</text>
+<rect class="tr" x="152" y="256" width="300" height="16" rx="8"/>
+<rect x="152" y="256" width="72" height="16" rx="8" fill="#d29922" opacity="0.9"/>
+<text class="t" x="566" y="266" font-size="11.5" font-weight="600" text-anchor="end">6<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="566" y="280" font-size="9.5" text-anchor="end">1,422</text>
+<text class="st" x="680" y="266" font-size="11.5" text-anchor="end">—</text>
+<text class="t" x="854" y="266" font-size="12" font-weight="600" text-anchor="end">1,422</text>
+<text class="t" x="26" y="314" font-size="13.5" font-weight="600">偏微分方程</text>
+<text class="st" x="26" y="329" font-size="9.5">PDE</text>
+<rect class="tr" x="152" y="306" width="300" height="16" rx="8"/>
+<rect x="152" y="306" width="54" height="16" rx="8" fill="#e3642a" opacity="0.9"/>
+<text class="t" x="566" y="316" font-size="11.5" font-weight="600" text-anchor="end">6<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="566" y="330" font-size="9.5" text-anchor="end">1,068</text>
+<text class="st" x="680" y="316" font-size="11.5" text-anchor="end">—</text>
+<text class="t" x="854" y="316" font-size="12" font-weight="600" text-anchor="end">1,068</text>
+<text class="t" x="26" y="364" font-size="13.5" font-weight="600">复变函数</text>
+<text class="st" x="26" y="379" font-size="9.5">Complex Analysis</text>
+<rect class="tr" x="152" y="356" width="300" height="16" rx="8"/>
+<rect x="152" y="356" width="6" height="16" rx="8" fill="#db61a2" opacity="0.9"/>
+<text class="t" x="566" y="366" font-size="11.5" font-weight="600" text-anchor="end">2<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="566" y="380" font-size="9.5" text-anchor="end">98</text>
+<text class="st" x="680" y="366" font-size="11.5" text-anchor="end">—</text>
+<text class="t" x="854" y="366" font-size="12" font-weight="600" text-anchor="end">98</text>
+<text class="t" x="26" y="414" font-size="13.5" font-weight="600">机器学习</text>
+<text class="st" x="26" y="429" font-size="9.5">Machine Learning</text>
+<rect class="tr" x="152" y="406" width="300" height="16" rx="8"/>
+<rect x="152" y="406" width="8" height="16" rx="8" fill="#0969da" opacity="0.32"/>
+<text class="st" x="566" y="416" font-size="11.5" text-anchor="end">—</text>
+<text class="t" x="680" y="416" font-size="11.5" font-weight="600" text-anchor="end">1<tspan class="st" font-size="9.5" font-weight="400"> 篇</tspan></text>
+<text class="st" x="680" y="430" font-size="9.5" text-anchor="end">140</text>
+<text class="t" x="854" y="416" font-size="12" font-weight="600" text-anchor="end">140</text>
+<line class="dv" x1="26" y1="452" x2="854" y2="452" stroke-width="1" opacity=".7"/>
+<text class="st" x="26" y="479" font-size="11.5">共 <tspan class="t" font-weight="700">7</tspan> 门课 · 笔记 <tspan class="t" font-weight="700">94</tspan> 篇 / <tspan class="t" font-weight="700">14,441</tspan> 行 · 习题 <tspan class="t" font-weight="700">4</tspan> 篇 / <tspan class="t" font-weight="700">1,322</tspan> 行</text>
 </svg>
